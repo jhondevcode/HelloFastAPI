@@ -7,3 +7,7 @@ app = FastAPI()
 async def home():
     return {"message": "Hello World"}
 
+
+@app.get("/user/{name}")
+async def user(name: str):
+    return {"user": name}
